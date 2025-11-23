@@ -1,0 +1,24 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Este proyecto es la implementación del frontend para un sistema de reservas de clases de gimnasio. Es una práctica para la asignatura de Desarrollo Web, centrada en HTML, CSS y JavaScript, que simula el flujo de un usuario desde el login hasta la confirmación de una reserva.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedericoLuque1987/web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FedericoLuque1987/web/issues"
+  },
+  "homepage": "https://github.com/FedericoLuque1987/web#readme"
+}
