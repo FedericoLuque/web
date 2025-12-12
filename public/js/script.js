@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         loginForm.addEventListener("submit", function(event) {
             // Evitamos que el formulario se envíe de la forma tradicional
-            event.preventDefault(); 
+            //event.preventDefault(); 
 
             // Limpiamos el mensaje de error previo
             errorMessage.textContent = "";
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("userEmail", email);
             
             // 5. Redirigimos a la página principal
-            window.location.href = "reserva.html"; 
+            //window.location.href = "reserva.html"; 
         });
     }
 
