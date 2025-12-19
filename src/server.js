@@ -26,35 +26,36 @@ app.post("/login", (req, res) => {
     const usuarioCorrecto1 = "fede@fede.com";
     const passwordCorrecta1 = "321";
 
-    console.log(req.body)
+    console.log(req.body);
 
-    res.send("Datos recibidos correctamente.");
-
-    email = req.body.email
-    password = req.body.password
+    const email = req.body.email;
+    const password = req.body.password;
 
     if (!email || !password) {
         res.send("Faltan datos en el formulario.");
         return;
     }
 
+    // Comprobamos usuario 1
     if (email === usuarioCorrecto && password === passwordCorrecta) {
-    res.send("Bienvenido, has iniciado sesión correctamente.");
-    } 
-    else {
-    res.send("Credenciales incorrectas.");
+        res.send("Bienvenido, has iniciado sesión correctamente.");
+        return;
+    }
+    
+    // Comprobamos usuario 2 (fede)
+    if (email === usuarioCorrecto1 && password === passwordCorrecta1) {
+        res.send("Bienvenido Federico, has iniciado sesión correctamente.");
+        return;
     }
 
-    if (email === usuarioCorrecto && password === passwordCorrecta) {
-        res.send("Bienvenido Federico, has iniciado sesión correctamente.");
-    } else if (email !== usuarioCorrecto && password === passwordCorrecta) {
+    // Gestión de errores detallada 
+    if (email !== usuarioCorrecto && password === passwordCorrecta) {
         res.send("Usuario incorrecto.");
     } else if (email === usuarioCorrecto && password !== passwordCorrecta) {
         res.send("Contraseña incorrecta.");
     } else {
         res.send("Usuario y contraseña incorrectos.");
     }
-
 });
 
 
