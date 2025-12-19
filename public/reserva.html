@@ -19,16 +19,16 @@
         <h2>Inscripción a Clases Dirigidas</h2>
         <p>Completa el formulario para reservar tu plaza.</p>
 
-        <form id="reserva-form">
+        <form id="reserva-form" method="POST" action="/resumen">
 
             <div class="form-group">
-                <label for="fecha-clase">Fecha y Hora de la Clase:</label>
-                <input type="datetime-local" id="fecha-clase" name="fecha-clase" required>
+                <label for="fechaClase">Fecha y Hora de la Clase:</label>
+                <input type="datetime-local" id="fechaClase" name="fechaClase" required>
             </div>
 
             <div class="form-group">
-                <label for="tipo-clase">Elige tu clase:</label>
-                <select id="tipo-clase" name="tipo-clase" required>
+                <label for="tipoClase">Elige tu clase:</label>
+                <select id="tipoClase" name="tipoClase" required>
                     <option value="0" selected disabled>-- Selecciona una --</option>
                     <option value="15">Spinning (15€)</option>
                     <option value="12">Yoga (12€)</option>

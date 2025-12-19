@@ -85,10 +85,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 5. Manejar el envío del formulario de reserva
         reservaForm.addEventListener("submit", function(event) {
-            event.preventDefault(); // Evitar recarga
-
-            // 5.1. Validación simple
+            
+            // 5.1. Validación simple (Cliente)
             if (tipoClase.value === "0" || !tipoClase.value) {
+                event.preventDefault(); // Detenemos el envío si hay error
                 errorMessage.textContent = "Por favor, selecciona un tipo de clase.";
                 return;
             }
@@ -122,9 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // 5.5. Guardar el objeto en localStorage
             // Usamos JSON.stringify para convertir el objeto en texto 
             localStorage.setItem("datosReserva", JSON.stringify(datosReserva));
-
-            // 5.6. Redirigir a la página de resumen
-            window.location.href = "resumen.html"; 
         });
     }
 
